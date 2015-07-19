@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      kram | local
+    </title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+
+    <script src="{{ url_for('static', filename='js/jquery-2.1.4.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/canvasjs.min.js') }}"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            -
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+           
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Kram <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#" id="shutdown-btn">Kill server</a></li>
+                <li class="divider"></li>
+                <li><a href="#">About</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h2 id="experiment-name"></h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#plots"><span class="glyphicon glyphicon-blackboard"></span> Live plots</a></li>
+            <li><a href="#notifications"><span class="glyphicon glyphicon-bell"></span> Notifications <span class="badge">1</span></a></li>
+            <li><a href="#details"><span class="glyphicon glyphicon-stats"></span> Stats</a></li>
+            <li><a href="#load"><span class="glyphicon glyphicon-object-align-bottom"></span> Compare</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-9">
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="plots">
+              <div class="plot">
+                <div class="plot-title">
+                  <h4></h4>
+                </div>
+                <div class="plot-image" id="func-plot">
+                </div>
+                <hr>
+              </div>
+            </div>
+            <div class="tab-pane" id="notifications">
+              <div class="alert alert-dismissible alert-info">
+                <button type="button" class="close" data-dismiss="alert"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                This section is under construction
+              </div>
+            </div>
+            <div class="tab-pane" id="details">
+              <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <span class="panel-title"></span>
+                    <a class="btn btn-primary btn-xs refresh-btn">Refresh data</a>
+                  </div>
+                  <div class="panel-body row">
+                    <div class="col-lg-8">
+                      <h4 class="text-primary">Basic Stats</h4>
+                      <hr>
+                      <div class="stat-row">
+                        <h1 class="text-success"></h1>
+                        <div class="stat-row-info">
+                          Max <br> at <span class="run-max"></span>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="stat-row">
+                        <h1 class="text-info"></h1>
+                        <div class="stat-row-info">
+                          Min <br> at <span class="run-min"></span>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="stat-row">
+                        <h1 class="text-warning"></h1>
+                        <div class="stat-row-info">
+                          Mean
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="time-row">
+                        <p class="text-primary">Total Runtime</p>
+                        <h3 class="runtime"></h3>
+                      </div>
+                      <hr>
+                      <div class="time-row">
+                        <p class="text-primary">Started at</p>
+                        <h3 class="beginTime"></h3>
+                      </div>
+                      <hr>
+                      <div class="time-row">
+                        <p class="text-primary">Time per run</p>
+                        <h3 class="perRunTime"></h3>
+                      </div>
+                      <hr>
+                      <div class="time-row">
+                        <p class="text-primary">Runs completed</p>
+                        <h3 class="runs"></h3>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="tab-pane" id="load">
+              <div class="alert alert-dismissible alert-info">
+                <button type="button" class="close" data-dismiss="alert"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                This section is under construction
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/variables.js') }}">
+    </script>
+    <script src="{{ url_for('static', filename='js/ui.js') }}">
+    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}">
+    </script>
+  </body>
+</html>
