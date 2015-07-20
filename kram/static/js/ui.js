@@ -53,10 +53,27 @@ meanDiv.html("<span class='glyphicon " + kram.statStyle[kram.data.mean.style].ic
     $("#details .run-min").text(kram.data.min.run);
     
     // Update runtime
-    $(".runtime").text(kram.data.runtime);
-    $(".beginTime").text(kram.data.beginTime);
-    $(".perRunTime").text(kram.data.perRunTime);
+    var hours   = Math.floor(kram.data.runtime / 3600);
+    var minutes = Math.floor((kram.data.runtime - (hours * 3600)) / 60);
+    var seconds = kram.data.runtime - (hours * 3600) - (minutes * 60);
+    
+    $(".runtime-hours").text(hours + " hrs");
+    $(".runtime-minutes").text(minutes + " mins");
+    $(".runtime-seconds").text(seconds + " secs");
+    
+    if (kram.data.beginTime == "NA") {
+        $(".beginTime").text("NA")
+    }
+    else {
+        $(".beginTime").text(kram.data.beginTime.getHours() + ":"  
+                             + kram.data.beginTime.getMinutes() + ", "
+                             + kram.data.beginTime.getDate() + "-"
+                             + (kram.data.beginTime.getMonth() + 1)  + "-" 
+                             + kram.data.beginTime.getFullYear());
+    }
+    
     $(".runs").text(kram.data.runs);
+    
 }
 
 // Update the live chart

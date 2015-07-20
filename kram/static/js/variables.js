@@ -19,7 +19,6 @@ kram.data = {
     },
     runtime: "NA",
     beginTime: "NA",
-    perRunTime: "NA",
     runs: "NA",
     series: []
 };

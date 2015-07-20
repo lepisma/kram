@@ -32,15 +32,18 @@ $(document).ready(function() {
     // Bind SSE event
     var evtSrc = new EventSource("/subscribe");
     evtSrc.onmessage = function(e) {
-        for (var i = 0; i < 1; i++)
-        {
-            data = JSON.parse(e.data);
-            kram.xVal = data.x;
-            kram.yVal = data.y;
-            kram.updateChart();
-            kram.setFunction(data.func);
-            kram.setTitle(data.title);
+
+        // Set starting time
+        if (kram.data.beginTime == "NA") {        
+            kram.data.beginTime = new Date();
         }
+        
+        data = JSON.parse(e.data);
+        kram.xVal = data.x;
+        kram.yVal = data.y;
+        kram.updateChart();
+        kram.setFunction(data.func);
+        kram.setTitle(data.title);
     };
 
     // Shutdown the server

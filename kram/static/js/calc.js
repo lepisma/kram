@@ -5,6 +5,8 @@ var kram = kram || {};
 kram.calculateStats = function() {
     // Modify only if enough data are available
     // Doesn't consider the data update between calculation
+
+    // Calculate mean, min and max
     if (kram.data.series.length > 1) {
         var minidx = 0;
         var min = kram.data.series[minidx].y;
@@ -27,7 +29,7 @@ kram.calculateStats = function() {
         
         mean /= kram.data.series.length;
 
-        // Update data
+        // Update mean, min and max
         if (kram.data.max.value != "NA") {
             if (kram.data.max.value < max) {
                 kram.data.max.style = 0;
@@ -62,5 +64,15 @@ kram.calculateStats = function() {
             }
         }
         kram.data.mean.value = mean;
+        kram.data.runs = kram.data.series[kram.data.series.length - 1].x + 1;
+    }
+
+    // Update timing data
+    if (kram.data.beginTime != "NA") {
+        var secs = 1000;
+        var currentTime = new Date();
+        var runtime = currentTime.getTime() - kram.data.beginTime.getTime();
+        console.log(runtime);
+        kram.data.runtime = Math.round(runtime / secs);
     }
 }
