@@ -58,7 +58,7 @@
           <ul class="nav nav-pills nav-stacked">
             <li class="active"><a href="#plots"><span class="glyphicon glyphicon-blackboard"></span> Live plots</a></li>
             <li><a href="#notifications"><span class="glyphicon glyphicon-bell"></span> Notifications <span class="badge">1</span></a></li>
-            <li><a href="#details"><span class="glyphicon glyphicon-stats"></span> Stats</a></li>
+            <li><a href="#details" id="stats-btn"><span class="glyphicon glyphicon-stats"></span> Stats</a></li>
             <li><a href="#load"><span class="glyphicon glyphicon-object-align-bottom"></span> Compare</a></li>
           </ul>
         </div>
@@ -148,6 +148,8 @@
     </div>
 
     <script src="{{ url_for('static', filename='js/variables.js') }}">
+    </script>
+    <script src="{{ url_for('static', filename='js/calc.js') }}">
     </script>
     <script src="{{ url_for('static', filename='js/ui.js') }}">
     </script>
