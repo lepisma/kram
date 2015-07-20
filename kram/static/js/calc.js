@@ -37,7 +37,7 @@ kram.calculateStats = function() {
             }
         }
         kram.data.max.value = max;
-        kram.data.max.run = maxidx;
+        kram.data.max.run = maxidx + kram.data.series[0].x;
 
         if (kram.data.min.value != "NA") {
             if (kram.data.min.value > min) {
@@ -48,7 +48,7 @@ kram.calculateStats = function() {
             }
         }
         kram.data.min.value = min;
-        kram.data.min.run = minidx;
+        kram.data.min.run = minidx + kram.data.series[0].x;
         
         if (kram.data.mean.value != "NA") {
             if (kram.data.mean.value < mean) {
