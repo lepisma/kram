@@ -16,7 +16,7 @@ requirements = [
 
 setup(
     name="kram",
-    version="0.0.1",
+    version="0.0.2",
     description="",
     author="lepisma",
     author_email="abhinav.tushar.vs@gmail.com",
