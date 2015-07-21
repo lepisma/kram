@@ -33,7 +33,25 @@ def init(name):
     #         continue
         
     webbrowser.open(root)
+
+def end():
+    """
+    Signals the end of experiment
+    """
+
+    end_data = {
+        "x": "end"
+    }
+     
+    t = threading.Thread(
+        target=requests.get,
+        args=(
+            root + "/push",
+            {"data": json.dumps(end_data)}
+        )
+    )
     
+    t.start()
 
 def shutdown():
     """

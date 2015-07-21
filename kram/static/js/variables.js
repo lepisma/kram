@@ -20,5 +20,6 @@ kram.data = {
     runtime: "NA",
     beginTime: "NA",
     runs: "NA",
-    series: []
+    series: [],
+    finished: false
 };

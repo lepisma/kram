@@ -28,18 +28,18 @@ $ def objective(x):
     return value
 
 $ # Perform iterations as usual
+$ kram.end()
 ```
 
 Program will run as usual but this time it will also open a live plotting window in your browser like this.
 
-![screen](screen.png)
+![main](screens/main.png)
+![stats](screens/stats.png)
 
 ### Todos
 
 **kram** is under development and many things are not here for this to be actually useful for anyone else.
 
 - Watching multiple objective functions
-- Handling multiple experiments
-- Calculating basic statistical information
 - Adding notifications
 - Logging and loading results

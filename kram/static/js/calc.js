@@ -68,11 +68,10 @@ kram.calculateStats = function() {
     }
 
     // Update timing data
-    if (kram.data.beginTime != "NA") {
+    if (kram.data.beginTime != "NA" & kram.data.finished == false) {
         var secs = 1000;
         var currentTime = new Date();
         var runtime = currentTime.getTime() - kram.data.beginTime.getTime();
-        console.log(runtime);
         kram.data.runtime = Math.round(runtime / secs);
     }
 }

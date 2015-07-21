@@ -39,11 +39,18 @@ $(document).ready(function() {
         }
         
         data = JSON.parse(e.data);
-        kram.xVal = data.x;
-        kram.yVal = data.y;
-        kram.updateChart();
-        kram.setFunction(data.func);
-        kram.setTitle(data.title);
+
+        // If experiment as ended
+        if (data.x == "end") {
+            kram.data.finished = true;
+        }
+        else {
+            kram.xVal = data.x;
+            kram.yVal = data.y;
+            kram.updateChart();
+            kram.setFunction(data.func);
+            kram.setTitle(data.title);
+        }
     };
 
     // Shutdown the server
