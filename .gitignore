@@ -37,5 +37,3 @@ output/*/index.html
 
 # Sphinx
 docs/_build
-
-test.py
