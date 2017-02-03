@@ -1,0 +1,25 @@
+{
+    "develop": {},
+    "_meta": {
+        "requires": {},
+        "sources": [
+            {
+                "url": "https://pypi.python.org/simple",
+                "verify_ssl": true
+            }
+        ],
+        "hash": {
+            "sha256": "f488c0b79f1714a73309a2c6439dc8028558b7380fd76ae565d283bc34f17e78"
+        }
+    },
+    "default": {
+        "tinydb": {
+            "version": "==3.2.2",
+            "hash": "sha256:26af7336a83c74c2eb9de27754f5962885b0a261ed84cb5e141648e1efcf4646"
+        },
+        "docopt": {
+            "version": "==0.6.2",
+            "hash": "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
+        }
+    }
+}

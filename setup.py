@@ -6,6 +6,11 @@ with open("README.rst") as readme_file:
 project_url = "https://github.com/"
 project_url += "lepisma/kram"
 
+required = [
+    "docopt",
+    "tinydb"
+]
+
 setup(
     name="kram",
     version="0.1.0",
@@ -14,7 +19,10 @@ setup(
     author="Abhinav Tushar",
     author_email="abhinav.tushar.vs@gmail.com",
     url=project_url,
-    install_requires=[],
+    install_requires=required,
+    entry_points={
+        "console_scripts": ["kram=kram.command:cli"],
+    },
     keywords="",
     packages=find_packages(),
     classifiers=(
