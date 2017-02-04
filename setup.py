@@ -11,7 +11,8 @@ required = [
     "docopt",
     "numpy",
     "tinydb",
-    "tinydb-serialization"
+    "tinydb-serialization",
+    "ujson"
 ]
 
 setup(

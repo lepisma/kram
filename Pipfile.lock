@@ -1,37 +1,50 @@
 {
-    "develop": {},
+    "develop": {
+        "mypy": {
+            "hash": "sha256:f6d086ab44c6dde12489fa7dad98c00aa535899783183c69eafd7db46bae9e62",
+            "version": "==0.470"
+        },
+        "typed-ast": {
+            "hash": "sha256:d41a1856c882a51e398ad9972c9a7964b2f5e210317088382a419b5183544a29",
+            "version": "==0.6.3"
+        }
+    },
     "default": {
-        "crayons": {
-            "version": "==0.1.2",
-            "hash": "sha256:5e17691605e564d63482067eb6327d01a584bbaf870beffd4456a3391bd8809d"
+        "colorama": {
+            "hash": "sha256:a4c0f5bc358a62849653471e309dcc991223cf86abafbec17cd8f41327279e89",
+            "version": "==0.3.7"
         },
         "docopt": {
-            "version": "==0.6.2",
-            "hash": "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
-        },
-        "tinydb": {
-            "version": "==3.2.2",
-            "hash": "sha256:26af7336a83c74c2eb9de27754f5962885b0a261ed84cb5e141648e1efcf4646"
-        },
-        "colorama": {
-            "version": "==0.3.7",
-            "hash": "sha256:a4c0f5bc358a62849653471e309dcc991223cf86abafbec17cd8f41327279e89"
+            "hash": "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491",
+            "version": "==0.6.2"
         },
         "tinydb-serialization": {
-            "version": "==1.0.3",
-            "hash": "sha256:2b339bee95c633768e2a87f895a17421aace9fd90b02615fd66dafbae9bc0702"
+            "hash": "sha256:2b339bee95c633768e2a87f895a17421aace9fd90b02615fd66dafbae9bc0702",
+            "version": "==1.0.3"
+        },
+        "crayons": {
+            "hash": "sha256:5e17691605e564d63482067eb6327d01a584bbaf870beffd4456a3391bd8809d",
+            "version": "==0.1.2"
+        },
+        "tinydb": {
+            "hash": "sha256:26af7336a83c74c2eb9de27754f5962885b0a261ed84cb5e141648e1efcf4646",
+            "version": "==3.2.2"
+        },
+        "ujson": {
+            "hash": "sha256:f66073e5506e91d204ab0c614a148d5aa938bdbf104751be66f8ad7a222f5f86",
+            "version": "==1.35"
         }
     },
     "_meta": {
-        "hash": {
-            "sha256": "feec6de28e51a82467d28459008d9eaa4391d0ff1cf8c30f222e53aa8c0c4baf"
-        },
         "requires": {},
         "sources": [
             {
                 "url": "https://pypi.python.org/simple",
                 "verify_ssl": true
             }
-        ]
+        ],
+        "hash": {
+            "sha256": "c3a7b4a5287eae6e660ddff1873a5abd661c07a822d8a51dd1d4a6a18838f9ac"
+        }
     }
 }

@@ -31,5 +31,5 @@ def cli():
 
     if arguments["init"]:
         cwd = Path.cwd()
-        print("Initializing store at {}".format(crayons.blue(cwd, bold=True)))
+        print("Initializing store in {}".format(crayons.blue(cwd, bold=True)))
         store = KramStore(cwd, arguments["<name>"])

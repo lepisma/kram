@@ -7,3 +7,7 @@ docopt = "*"
 tinydb = "*"
 tinydb-serialization = "*"
 crayons = "*"
+ujson = "*"
+
+[dev-packages]
+mypy = "*"
