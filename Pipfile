@@ -5,3 +5,5 @@ url = "https://pypi.python.org/simple"
 [packages]
 docopt = "*"
 tinydb = "*"
+tinydb-serialization = "*"
+crayons = "*"

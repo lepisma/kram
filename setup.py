@@ -7,8 +7,11 @@ project_url = "https://github.com/"
 project_url += "lepisma/kram"
 
 required = [
+    "crayons",
     "docopt",
-    "tinydb"
+    "numpy",
+    "tinydb",
+    "tinydb-serialization"
 ]
 
 setup(
